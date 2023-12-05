@@ -6,16 +6,16 @@
     <listener class-name="utility.Listner"/>
   </listeners>
   <test name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="headless"/>
     <classes>
-      <class name="test.TC007_AddToCart">
+      <class name="test.TC003_PositiveLogIn_Testcase">
         <methods>
-          <include name="browserLaunch"/>
-          <include name="AddToCartPageTest" invocation-numbers="0"/>
           <include name="setup"/>
+          <include name="browserLaunch"/>
+          <include name="logInTest" invocation-numbers="0 1"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- test.TC007_AddToCart -->
+      </class> <!-- test.TC003_PositiveLogIn_Testcase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

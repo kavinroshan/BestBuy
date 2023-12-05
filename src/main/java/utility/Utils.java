@@ -35,6 +35,9 @@ public class Utils {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		
+//		ChromeOptions opt = new ChromeOptions();
+//		opt.addArguments("headless");
+		
 		if(browser.equalsIgnoreCase("chrome")) {
 			
 		driver = new ChromeDriver(options);
@@ -43,7 +46,8 @@ public class Utils {
 			
 			driver = new EdgeDriver();
 			
-		} else if (browser.equalsIgnoreCase("firefox")) {
+		}
+		else if (browser.equalsIgnoreCase("firefox")) {
 			
 			driver= new FirefoxDriver();
 			

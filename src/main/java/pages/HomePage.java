@@ -199,3 +199,10 @@ public class HomePage extends ProjectSpecification {
 	
 	
 }
+
+
+//<suiteXmlFile>Positive_SignUpTest.xml</suiteXmlFile>
+//<suiteXmlFile>Negative_SignUp_testng.xml</suiteXmlFile>
+//<suiteXmlFile>Positive_LogIntestng.xml</suiteXmlFile>
+//<suiteXmlFile>Negative_LogIntestng.xml</suiteXmlFile>
+//<suiteXmlFile>Positive_AddToCart_testng.xml</suiteXmlFile>
