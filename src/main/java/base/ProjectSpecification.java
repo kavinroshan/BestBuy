@@ -29,7 +29,7 @@ public class ProjectSpecification extends Utils {
 	  @AfterMethod   // To close the browser
 	  public void closeBrowser() {
 		  
-		 // close();
+		  close();
 
 }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite (3)]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="url" value="https://www.bestbuy.com/"/>
+  <listeners>
+    <listener class-name="utility.Listner"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="test.TC007_AddToCart">
+        <methods>
+          <include name="AddToCartPageTest" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- test.TC007_AddToCart -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite (3)] -->

@@ -9,24 +9,52 @@ import base.ProjectSpecification;
 
 public class InitialPage extends ProjectSpecification {
 	
-	@FindBy(xpath="(//a[@class='us-link'])[1]")
-	WebElement country;
+	@FindBy(xpath="//span[text()='Account']")
+	WebElement account;
+	
+	@FindBy(xpath="//a[text()='Create Account']")
+	WebElement createAccount;
+	
+	@FindBy(xpath="//a[text()='Sign In']")  //Login Button
+	WebElement SignInButton;
 	
 	
-public InitialPage(WebDriver driver) {
+	public InitialPage(WebDriver driver) {
 		
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 		
 	}
-
-public HomePage clickCountry() {
-	click(country);
-	return new HomePage(driver);
+	
+	public InitialPage WaitMethod() throws InterruptedException {
+		Wait();
+		return this;
+		}
+	
+	public InitialPage ClickAlert() throws InterruptedException {
+		Alert();
+		return this;
+	}
+	
+	public InitialPage clickAccount() {
+    click(account);
+    return this;
 }
-
-public HomePage clickCountry1() {
-	click(country);
-	return new HomePage(driver);
-}
+	
+	public RegisterPage clickCreateAccount() {
+	    click(createAccount);
+	    return new RegisterPage(driver);
+	}
+	
+	public InitialPage clickAccount1() {
+	    click(account);
+	    return this;
+	}
+	
+	public LogInPage ClickSignIn() {
+		click(SignInButton);
+		return new LogInPage(driver);
+	}
+	
+	
 }

@@ -1,10 +1,12 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.aventstack.extentreports.gson.GsonExtentTypeAdapterBuilder.Builder;
 
@@ -34,7 +36,11 @@ public class RegisterPage extends ProjectSpecification {         //constructor
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement createaccountButton;
 
+	//validation
 	
+	@FindBy(xpath="//p[text()='Please enter your first name.']")
+	WebElement firstnameError;
+
 	
 	public RegisterPage(WebDriver driver) {
 		this.driver=driver;
@@ -80,11 +86,37 @@ public class RegisterPage extends ProjectSpecification {         //constructor
 	
 	public RegisterPage AccountButtonClick() {
 		click(createaccountButton);
+		System.out.println("Registered Successfully");
 		return this;
 	}
 	
-public RegisterPage RegisterSuccess() {
-	System.out.println("Registered Successfully");
-	return null;
-}
+	public RegisterPage AccountButtonClick2() {     //negtiveSignUp validation
+		click(createaccountButton);
+		
+		String source = driver.getPageSource();
+		
+		
+		if(source.contains("Please enter a valid email address."))
+			System.out.println("Negative SignUp Pass");
+	
+		
+			else if(source.contains("Please enter a strong password.")) 
+			System.out.println("Negative SignUp Pass"); 
+		
+		
+			else if(source.contains("Please reenter your password.")) 
+			System.out.println("Negative SignUp Pass"); 
+		
+		
+			else if(source.contains("Please enter a valid mobile phone number.")) 	
+			System.out.println("Negative SignUp Pass"); 
+		
+		
+			else {
+				System.out.println("Negative SignUp Fail");
+			}
+
+		return this;
+	}
+
 }

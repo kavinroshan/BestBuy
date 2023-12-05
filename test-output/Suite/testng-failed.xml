@@ -2,17 +2,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="url" value="https://www.bestbuy.com/"/>
+  <listeners>
+    <listener class-name="utility.Listner"/>
+  </listeners>
   <test name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="test.TC001_RegisterTest">
+      <class name="test.TC007_AddToCart">
         <methods>
-          <include name="registerTest"/>
           <include name="browserLaunch"/>
+          <include name="AddToCartPageTest" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- test.TC001_RegisterTest -->
+      </class> <!-- test.TC007_AddToCart -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

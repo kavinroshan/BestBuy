@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-05T15:47:19 IST" name="Suite" finished-at="2023-12-05T15:47:58 IST" duration-ms="39626">
+    <groups>
+    </groups>
+    <test started-at="2023-12-05T15:47:19 IST" name="BottomLinkTest" finished-at="2023-12-05T15:47:58 IST" duration-ms="39626">
+      <class name="test.TC006_BottomLinkTest">
+        <test-method is-config="true" signature="browserLaunch(java.lang.String,java.lang.String)[pri:0, instance:test.TC006_BottomLinkTest@c430e6c]" started-at="2023-12-05T15:47:19 IST" name="browserLaunch" finished-at="2023-12-05T15:47:28 IST" duration-ms="8856" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.bestbuy.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method signature="BottomLinkTest()[pri:0, instance:test.TC006_BottomLinkTest@c430e6c]" started-at="2023-12-05T15:47:28 IST" name="BottomLinkTest" finished-at="2023-12-05T15:47:58 IST" duration-ms="30104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BottomLinkTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:test.TC006_BottomLinkTest@c430e6c]" started-at="2023-12-05T15:47:58 IST" name="closeBrowser" finished-at="2023-12-05T15:47:58 IST" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.TC006_BottomLinkTest -->
+    </test> <!-- BottomLinkTest -->
+  </suite> <!-- Suite -->
+</testng-results>

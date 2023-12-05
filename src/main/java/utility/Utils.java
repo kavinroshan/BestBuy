@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -26,7 +27,7 @@ import org.testng.asserts.Assertion;
 
 public class Utils {
 	
-	public  WebDriver driver;
+	public static WebDriver driver;
 	public String excelfile;
 	
 	public void launchBrowser(String browser, String url) {
@@ -70,16 +71,19 @@ public static String[][] readExcel(String excelfile) throws IOException {
 	  XSSFWorkbook book=new XSSFWorkbook("./data/"+excelfile+".xlsx");  // open work book
 		XSSFSheet sheet = book.getSheetAt(0);
 		int rowcount = sheet.getLastRowNum(); 
-		short columnCount = sheet.getRow(0).getLastCellNum(); 
+		short columnCount = sheet.getRow(0).getLastCellNum();
 		
+		DataFormatter formatter = new DataFormatter();
 		String [][] data= new String[rowcount][columnCount]; 
 		for (int i = 1; i <= rowcount; i++) {
 			XSSFRow row = sheet.getRow(i);
 			for (int j = 0; j < columnCount; j++) {
 				XSSFCell cell = row.getCell(j);
 				//System.out.println(cell.getStringCellValue());
-				data[i-1][j]=cell.getStringCellValue();   
-				
+				data[i-1][j]=(cell==null) ? "" : formatter.formatCellValue(cell);   
+				/*
+				 * if(data[i-1][j]== null) { data[i-1][j]=""; }
+				 */
 			}
 		}
 		book.close();
@@ -88,7 +92,7 @@ public static String[][] readExcel(String excelfile) throws IOException {
  
 
 public void click(WebElement element) {                                     //click method
-	 
+	
 	WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(7));
 	wait.until(ExpectedConditions.elementToBeClickable(element));
 	element.click();
@@ -109,9 +113,7 @@ public void Alert() throws InterruptedException {   //alert
 	
 	Alert alert = driver.switchTo().alert();
 	alert.dismiss();
-	
 
-	
 }
 
 public void Wait() throws InterruptedException {
@@ -127,6 +129,11 @@ public String getScreenShot(String testmethodname) throws IOException {
 	FileUtils.copyFile(source, destiny);
 	return path;
 	
+}
+
+public void Assertion(String actual, String expected) {
+	Assert.assertEquals(actual, expected);
+
 }
 	
 }

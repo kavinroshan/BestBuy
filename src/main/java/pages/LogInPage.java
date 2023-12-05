@@ -19,8 +19,6 @@ public class LogInPage extends ProjectSpecification{
 	@FindBy(xpath="//button[text()='Sign In']") //signin
 	WebElement signInButton;
 	
-	@FindBy(xpath="(//button[@type='button'])[2]")
-	WebElement menuButton;
 	
 	
 	public LogInPage(WebDriver driver) {
@@ -43,32 +41,27 @@ public class LogInPage extends ProjectSpecification{
 		return this;
 	}
 	
-	public LogInPage ActionClass() {
-		Actions action = new Actions(driver);
-		action.moveToElement(signInButton).perform();
-		action.click(signInButton).perform();
+	
+	public LogInPage SingInButton() {		
+		click(signInButton);
 		System.out.println("Signin Successfully");
 		return this;
 		
 	}
-	
-//	public LogInPage SingInButton(String signIn) {
-//		sendKeys(signInButton, signIn);
-//		System.out.println("Signin Successfully");
-//		return this;
-//	}
 
-//	public LogInPage MenuButton() {
-//		click(menuButton);
-//		return this;
+	public LogInPage SingInButton2() {		          //negtiveLogin validation
+		click(signInButton);
+		String source = driver.getPageSource();
 		
+		if(source.contains("Please enter a valid email address."))
+			System.out.println("Negative LogIn Pass");
+		
+		else if(source.contains("Please enter your password."))
+			System.out.println("Negative LogIn Pass");
+		
+		else {
+			System.out.println("Negative LogIn Fail");
+		}
+		return this;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-
+}

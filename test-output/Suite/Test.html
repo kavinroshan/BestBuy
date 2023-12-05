@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 22 09:52:56 IST 2023</td>
+<td>Started on:</td><td>Tue Dec 05 14:47:18 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>153 seconds (153336 ms)</td>
+<tr><td>Total time:</td><td>154 seconds (154019 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,117 +75,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.TC002_LogInTest.logInTest()'><b>logInTest</b><br>Test class: test.TC002_LogInTest<br>Parameters: rovanth1997@gmail.com, rovanth@12345</td>
+<td title='test.TC007_AddToCart.AddToCartPageTest()'><b>AddToCartPageTest</b><br>Test class: test.TC007_AddToCart<br>Parameters: Mobile, Kavin, Roshan, 9778456321, kavinroshan111@gmail.com, kavinroshan111@gmail.com, 9778456321</td>
 <td></td>
-<td>57</td>
-<td>test.TC002_LogInTest@21de60b4</td></tr>
-<tr>
-<td title='test.TC002_LogInTest.logInTest()'><b>logInTest</b><br>Test class: test.TC002_LogInTest<br>Parameters: , </td>
-<td></td>
-<td>69</td>
-<td>test.TC002_LogInTest@21de60b4</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='test.TC001_RegisterTest.registerTest()'><b>registerTest</b><br>Test class: test.TC001_RegisterTest</td>
-<td><div><pre>java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\KAVIN ROSHAN\eclipse-workspace\E-Commerce\.\data\Book1.xlsx (The process cannot access the file because it is being used by another process)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:115)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:509)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1308)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1036)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1126)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.io.FileNotFoundException: C:\Users\KAVIN ROSHAN\eclipse-workspace\E-Commerce\.\data\Book1.xlsx (The process cannot access the file because it is being used by another process)
-	at java.base/java.io.FileOutputStream.open0(Native Method)
-	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:235)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:184)
-	at org.apache.poi.openxml4j.opc.internal.FileHelper.copyFile(FileHelper.java:65)
-	at org.apache.poi.openxml4j.opc.ZipPackage.closeImpl(ZipPackage.java:488)
-	at org.apache.poi.openxml4j.opc.OPCPackage.close(OPCPackage.java:470)
-	at org.apache.poi.ooxml.POIXMLDocument.close(POIXMLDocument.java:189)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.close(XSSFWorkbook.java:617)
-	at utility.Utils.readExcel(Utils.java:85)
-	at base.ProjectSpecification.getData(ProjectSpecification.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:55)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
-	... 22 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace747158012", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace747158012'><pre>java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\KAVIN ROSHAN\eclipse-workspace\E-Commerce\.\data\Book1.xlsx (The process cannot access the file because it is being used by another process)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:115)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:509)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1308)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1036)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1126)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.io.FileNotFoundException: C:\Users\KAVIN ROSHAN\eclipse-workspace\E-Commerce\.\data\Book1.xlsx (The process cannot access the file because it is being used by another process)
-	at java.base/java.io.FileOutputStream.open0(Native Method)
-	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:235)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:184)
-	at org.apache.poi.openxml4j.opc.internal.FileHelper.copyFile(FileHelper.java:65)
-	at org.apache.poi.openxml4j.opc.ZipPackage.closeImpl(ZipPackage.java:488)
-	at org.apache.poi.openxml4j.opc.OPCPackage.close(OPCPackage.java:470)
-	at org.apache.poi.ooxml.POIXMLDocument.close(POIXMLDocument.java:189)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.close(XSSFWorkbook.java:617)
-	at utility.Utils.readExcel(Utils.java:85)
-	at base.ProjectSpecification.getData(ProjectSpecification.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:55)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
-	... 22 more
-</pre></div></td>
-<td>0</td>
-<td>test.TC001_RegisterTest@1700915</td></tr>
+<td>142</td>
+<td>test.TC007_AddToCart@795509d9</td></tr>
 </table><p>
 </body>
 </html>

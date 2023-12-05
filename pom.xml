@@ -41,18 +41,21 @@
     <version>8.0.33</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+
 <dependency>
     <groupId>org.apache.logging.log4j</groupId>
     <artifactId>log4j-api</artifactId>
     <version>2.20.0</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.4</version>
+</dependency>
 
-  	<dependency>
-  		<groupId>org.guvi</groupId>
-  		<artifactId>ExcelOpertion</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+  	
   	
   	<dependency>
 		     <groupId>org.projectlombok</groupId>
@@ -70,4 +73,39 @@
   	
   </dependencies>
   
+  
+  <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M5</version>
+					<configuration>
+						<suiteXmlFiles>
+							
+							<suiteXmlFile>Positive_SignUpTest.xml</suiteXmlFile>
+                            <suiteXmlFile>Negative_SignUp_testng.xml</suiteXmlFile>
+                            <suiteXmlFile>Positive_LogIntestng.xml</suiteXmlFile>
+                            <suiteXmlFile>Negative_LogIntestng.xml</suiteXmlFile>
+                            <suiteXmlFile>Positive_AddToCart_testng.xml</suiteXmlFile>
+							<suiteXmlFile>BottomLinktestng.xml</suiteXmlFile>
+							
+							
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
 </project>
