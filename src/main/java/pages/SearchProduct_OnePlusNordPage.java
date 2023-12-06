@@ -47,7 +47,8 @@ public class SearchProduct_OnePlusNordPage extends ProjectSpecification{
 		return this;
 	}
 	
-	public SearchProduct_OnePlusNordPage ContinueShopping() {    //continueshopping
+	public SearchProduct_OnePlusNordPage ContinueShopping() throws InterruptedException {    //continueshopping
+		Thread.sleep(3000);
 		click(continueShop);
 		return this;
 	}

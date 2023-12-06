@@ -55,7 +55,8 @@ public class ShopProductByDept2_SamsungGalaxyS23Page extends ProjectSpecificatio
 		return this;
 	}
 	
-	public ShopProductByDept2_SamsungGalaxyS23Page ClickContinueShopping() {  //coninueshopping
+	public ShopProductByDept2_SamsungGalaxyS23Page ClickContinueShopping() throws InterruptedException {  //coninueshopping
+		Thread.sleep(3000);
 		click(continueShopping);
 		return this;
 	}
